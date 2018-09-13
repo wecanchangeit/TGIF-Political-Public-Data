@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Political Statistics</title>  
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel = "stylesheet"
+   type = "text/css"
+   href = "style.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    </head>
+    
+    <body>
+        <header>         
+<!--This will be my first container it will have three boxes...one that takes up maybe two on the left another that takes up 8 in the middle and then another one that takes up 2 on the right        -->
+        
+            <div class="row myHeader">
+            
+            <!--In the one on the left I'm going to put a logo. I don't think I have this yet so I guess I'll make one or just download an image-->
+     
+
+            
+            <div class="col-sm-4">            <img src="Attachments/TGIF_Logo2.png" alt="TGIF Logo"></div>
+            <div class="col-sm-8">           
+</div>
+      
+     
+            
+        
+<!--In the rightI'll need to put an email glicerin image and then the email link of info@tgif.net        -->
+            
+            <div class="col-sm-2 emailLogo"><a href="#"><span class="glyphicon glyphicon-envelope"></span> info@tgif.net</a></div>
+        </div>     
+   
+
+<!--Then I'm going to need a new container which takes up the width of the screen. This is specifically a nav bar so maybe use the tools for that. It will have two buttons inside it. The first of which is static (Home) but the second of which (Congress 113) is actually a drop down with links to (House) and (Senate) -->
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="home.html">Home</a></li>
+      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Congress 113<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="house.html">House</a></li>
+            <li><a href="senate.html">Senate</a></li>
+          </ul>
+        
+        </li>
+        
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Attendance<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="house_attendance_stats.html">House</a></li>
+            <li><a href="senate_attendance_stats.html">Senate</a></li>
+          </ul>
+        
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Party Loyalty<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="house_loyalty_stats.html">House</a></li>
+            <li><a href="senate_loyalty_stats.html">Senate</a></li>
+          </ul>        
+                
+        </li>
+        
+    </ul>
+    </div>    
+</nav>   
+        
+</header>
+        
+<!--Then I need a container with a h1 in it
+-->
+        
+<div class="row">
+     <div class="col-sm-6">        
+         <div><h1>Party Loyalty in the Senate</h1></div> 
+            <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. </p>
+    </div>
+    <div class="col-sm-6">
+    	    
+            <h2>Senate at a glance</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Party</th>
+                        <th>Number of Reps</th>
+                        <th>% Voted with Prty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="R">
+                        <td>Republican</td>
+                        <td id="numOfReps">--</td>
+                        <td id='repPercentage'>--</td>
+                    </tr>
+                    <tr class="D">
+                        <td>Democrat</td>
+                        <td id="numOfDems">--</td>
+                        <td id='demPercentage'>--</td>
+                    </tr>
+                    <tr class="I">
+                        <td>Independent</td>
+                        <td id='numOfIndys'>--</td>
+                        <td id="indyPercentage">--</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+        
+<div class="row">
+    <div class="col-sm-6">
+            <h2>Least Loyal (Bottom 10% of Party)</h2>
+            <table class="table" >
+                <thead>
+                    <tr>
+                        <th>Name</th>
+<!--                        <th>Party</th>-->
+                        <th>Total Votes</th>
+                        <th>% Party Votes</th>
+                    </tr>
+                </thead>
+                <tbody id="senateUnloyaltyTable">
+                  
+                </tbody>
+            </table>
+        </div>
+    <div class="col-sm-6">
+            <h2>Most Loyal (Top 10% of Party)</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+<!--                        <th>Party</th>-->
+                        <th>Total Votes</th>
+                        <th>% Party Votes</th>
+                    </tr>
+                </thead>
+                <tbody id="senateLoyaltyTable">
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+  
+    
+          
+<!--
+    I put my statistics here initially but then I thought it was cleaner to have them on the main.js page so I moved them there
+    
+    I also added script links to both my 113house data and my main.js
+-->
+    
+<!--
+       <script src="113senate.json">
+            </script>    
+-->
+
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        
+        <script src='main_stats.js'></script>
+</body>
+</html>

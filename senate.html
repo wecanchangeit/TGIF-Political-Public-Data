@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Senate Data</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+    <header>
+        <!--This will be my first container it will have three boxes...one that takes up maybe two on the left another that takes up 8 in the middle and then another one that takes up 2 on the right        -->
+
+            <div class="row myHeader">
+            
+            <!--In the one on the left I'm going to put a logo. I don't think I have this yet so I guess I'll make one or just download an image-->
+     
+
+            
+            <div class="col-sm-4">            <img src="Attachments/TGIF_Logo2.png" alt="TGIF Logo"></div>
+            <div class="col-sm-8">           
+</div>
+      
+     
+            
+        
+<!--In the rightI'll need to put an email glicerin image and then the email link of info@tgif.net        -->
+            
+            <div class="col-sm-2 emailLogo"><a href="#"><span class="glyphicon glyphicon-envelope"></span> info@tgif.net</a></div>
+        </div>   
+
+
+
+        <!--Then I'm going to need a new container which takes up the width of the screen. This is specifically a nav bar so maybe use the tools for that. It will have two buttons inside it. The first of which is static (Home) but the second of which (Congress 113) is actually a drop down with links to (House) and (Senate) -->
+
+
+        <nav class="navbar navbar-default">
+    <div class="navbar-header">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="home.html">Home</a></li>
+      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Congress 113<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="house.html">House</a></li>
+            <li><a href="senate.html">Senate</a></li>
+          </ul>
+        
+        </li>
+        
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Attendance<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="house_attendance_stats.html">House</a></li>
+            <li><a href="senate_attendance_stats.html">Senate</a></li>
+          </ul>
+        
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Party Loyalty<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="house_loyalty_stats.html">House</a></li>
+            <li><a href="senate_loyalty_stats.html">Senate</a></li>
+          </ul>        
+                
+        </li>
+        
+    </ul>
+    </div>    
+</nav>
+
+    </header>
+
+    <!--Then I need a container with a h1 in it
+-->
+
+    <div>
+        <h1>Senators</h1>
+    </div>
+    <!--
+
+        Then I need a container with an 8 split with a pararaph in and then a 4 split with blank text.
+-->
+    <div class="row">
+        <div class="col-sm-8">
+            <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
+        </div>
+        <div class="col-sm-4"></div>
+
+        <br>
+
+
+    </div>
+
+    <!--Then you have a container with filters. This has three filters all with check boxes for Replublican, Democrat and Independent. This takes up 9 of the screen. Then for the remaining three you have a filter by state        -->
+
+    <div class="row">
+        <div class="col-sm-1">Filter by: </div>
+
+        <div class="col-sm-6">
+
+
+
+            Republicans
+            <input type="checkbox" id="repBox" name="isRep" onchange="hidePolitician('R')" checked> Democrats
+            <input type="checkbox" name="isDem" onchange="hidePolitician('D')" checked> Independents <input type="checkbox" name="isIndy" onchange="hidePolitician('I')" checked>
+        </div>
+
+        <div class="col-sm-5">
+
+
+            <!--Here I want to add a drop down that includes every state. This will just be a standard drop down but I'm going to need to give it an ID of stateDD-->
+
+            
+            <select id='stateDD' onchange="showState()">
+  <option value="all">All</option>
+ 
+            </select>
+
+
+    
+    
+        </div>    
+        </div>
+<br>
+<!--Then the table of data which can come out of the button. All of this data needs to be formatted so it's centred       -->
+        
+         <table class="table table-hover showReps showDems showIndys">
+            <thead>
+                <tr>
+                    <th class="senatorTableRow Col1">Senator Name</th>
+                    <th class="senatorTableRow Col2">Political Party</th>
+                    <th class="senatorTableRow Col3">State</th>
+                    <th class="senatorTableRow Col4">Seniority</th>
+                    <th class="senatorTableRow Col5">Percentage of votes with party</th>
+                </tr>
+                
+            </thead>
+        <tbody id="political-data"></tbody>
+        </table>
+
+<!--Finally a footer with (C)2016 TGIF | All Rights Reserved which need to be centred.        -->
+        
+      
+  <div class="container">
+  <div class="panel panel-default">
+    <div class="panel-footer">(c)2016 TGIF | All Rights Reserved</div>
+  </div>
+</div>
+
+        
+<!--
+        <input type="button" onclick='showData()' value="show me the data">
+        
+        <br>
+        <br>
+-->
+       
+
+              
+<!--
+        <script src="113senate.json">
+            </script>    
+-->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+
+        <script src="main.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <title>TGIF Homepage</title>
+         
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel = "stylesheet"
+   type = "text/css"
+   href = "style.css" >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    </head>
+    
+
+    <body>
+        <header>         
+<!--This will be my first container it will have three boxes...one that takes up maybe two on the left another that takes up 8 in the middle and then another one that takes up 2 on the right        -->
+        
+            <div class="row myHeader">
+            
+            <!--In the one on the left I'm going to put a logo. I don't think I have this yet so I guess I'll make one or just download an image-->
+     
+
+            
+            <div class="col-sm-4">            <img src="Attachments/TGIF_Logo2.png" alt="TGIF Logo"></div>
+            <div class="col-sm-8">           
+</div>
+      
+     
+            
+        
+<!--In the rightI'll need to put an email glicerin image and then the email link of info@tgif.net        -->
+            
+            <div class="col-sm-2 emailLogo"><a href="#"><span class="glyphicon glyphicon-envelope"></span> info@tgif.net</a></div>
+        </div>         
+        
+   
+
+<!--Then I'm going to need a new container which takes up the width of the screen. This is specifically a nav bar so maybe use the tools for that. It will have two buttons inside it. The first of which is static (Home) but the second of which (Congress 113) is actually a drop down with links to (House) and (Senate) -->
+
+
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="home.html">Home</a></li>
+      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Congress 113<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="house.html">House</a></li>
+            <li><a href="senate.html">Senate</a></li>
+          </ul>
+        
+        </li>
+        
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Attendance<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="house_attendance_stats.html">House</a></li>
+            <li><a href="senate_attendance_stats.html">Senate</a></li>
+          </ul>
+        
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Party Loyalty<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="house_loyalty_stats.html">House</a></li>
+            <li><a href="senate_loyalty_stats.html">Senate</a></li>
+          </ul>        
+                
+        </li>
+        
+    </ul>
+    </div>    
+</nav>
+        
+</header>
+
+<!--
+
+        Then I need a container with an 8 split with a pararaph in and then a 4 split with blank text.
+-->
+<div class="row">
+<!--
+    <div class="col-sm-8">
+         
+-->
+
+    <!--This is a new container with the acordion feature-->
+        
+    <div class="container col-sm-8">
+      <h1>About Us</h1>
+      <p>We believe that a Governments obligations is to share information with their citizens. Find out more about how we work below. 
+          </p>
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Our Beliefs</a>
+            </h4>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse in">
+            <div class="panel-body"><p>Openness, accountability, and honesty define government transparency. In a free society, transparency is government's obligation to share information with citizens. It is at the heart of how citizens hold their public officials accountable. Here at TGIF we believe that government should be transparent.
+            <p>Governments exist to serve the people. Information on how officials conduct the public business and spend taxpayer money must be readily available and easily understood. This transparency allows good and just governance. Transparency promotes accountability and provides information for citizens about what their Government is doing.</p>
+
+        <p>We also believe that government should be participatory. Public engagement enhances the Government's effectiveness and improves the quality of its decisions. Knowledge is widely dispersed in society, and public officials benefit from having access to that dispersed knowledge. We invite you to use our site to become actively engaged in American government.</p></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">How we work</a>
+            </h4>
+          </div>
+          <div id="collapse2" class="panel-collapse collapse">
+              <div class="panel-body">
+              
+                  <p>TGIF works to disclose information in forms that the public can readily find and use. We solicit public feedback to identify information of greatest use to the public.</p>
+              
+         </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"> Background History of Government Transparency</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body"> <p>In the West, the idea that government should be open to public scrutiny and susceptible to public opinion dates back at least to the time of the Enlightenment, when many philosophes made an attack on absolutist doctrine of state secrecy, a core part of their intellectual project. The passage of formal legislative instruments to this end can also be traced to this time with Sweden, for example, (which then included Finland as a Swedish-governed territory) enacting free press legislation as part of its constitution (Freedom of the Press Act, 1766). This approach, and that of the philosophes more broadly, is strongly related to recent historiography on the eighteenth-century public sphere.</p>
+         
+    <p>Influenced by Enlightenment thought, the revolutions in America (1776) and France (1789), freedom of the press enshrined provisions and requirements for public budgetary accounting and freedom of the press in constitutional articles. In the nineteenth century, attempts by Metternichean statesmen to row back on these measures were vigorously opposed by a number of eminent liberal politicians and writers, Bentham, Mill and Acton prominent among the latter.</p>
+         
+    <p>Open government is widely seen to be a key hallmark of contemporary democratic practice and is often linked to the passing of freedom of information legislation. Scandinavian countries claim to have adopted the first freedom of information legislation, dating the origins of its modern provisions to the eighteenth century and Finland continuing the presumption of openness after gaining independence in 1917, passing its Act on Publicity of Official Documents in 1951 (superseded by new legislation in 1999).</p> 
+         
+    <p>The United States passed its Freedom of Information Act (FOIA) in 1966, FOIAs, Access to Information Acts (AIAs) or equivalent laws were passed in Denmark and Norway in 1970.</p> </div>
+      </div>
+    </div>
+  </div> 
+</div>
+    
+        
+<!--This is the end of the new container with acordion          -->
+        
+ 
+         
+   
+   
+    
+    
+
+    <div class="col-sm-4">   <img src="Attachments/TGIF_Logo.png" alt="Logo for TGIF">
+        </div>
+ 
+    
+      </div> 
+
+      
+
+      
+  <div class="container">
+  <div class="panel panel-default">
+    <div class="panel-footer">(c)2016 TGIF | All Rights Reserved</div>
+  </div>
+</div>
+
+        
+         <script src="https://unpkg.com/vue/dist/vue.js"></script>     
+<!--
+        <script src="113house.json">
+            </script>    
+-->
+
+        <script src="main.js"></script>
+        
+    </body>
+</html>

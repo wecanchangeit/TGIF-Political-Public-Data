@@ -1,0 +1,29 @@
+* {font-family: monospace; }
+    .stateDropdown {text-align: right;}
+    .table {text-align: center;}    
+    .panel-footer {text-align: center;}    
+p { margin: 20px; }
+h1 {margin: 10px;}
+
+
+.hideParty {display: none;}
+.hideState {display: none;}
+
+.senatorTableRow {text-align: center;}
+.col1 {width: 200px;}
+
+
+.table {table-layout: fixed; width: 100%; text-align: center;}
+
+.th {text-align: center;}
+
+.td {text-align: center;}
+
+.R {background-color: red; color: white}
+.D {background-color: darkblue; color: white;}
+.I {background-color: dimgrey; color: white;}
+
+.emailLogo {font-size: 1.5em; text-align: center; margin: auto; width: 30%;
+    padding: 5px; justify-content: center;}
+
+.myHeader {display: flex; flex-direction: row; justify-content: space-between}
